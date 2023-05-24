@@ -44,14 +44,14 @@ class UnionFind:
 		#Union by rank
 		if self.size[p1] > self.size[p2]:
 			self.parent[p2] = p1
-			self.size[p1] += 1
 			
 		elif self.size[p2] > self.size[p1]:
 			self.parent[p1] = p2
-			self.size[p2] += 1
 			
 		else:
 			self.parent[p2] = p1
+			self.size[p2] += 1
+			
 		self.components -= 1
 		
 	def connected(self, ind1, ind2):
